@@ -1,0 +1,33 @@
+# import os
+
+# with os.scandir('C:/Users/aluno/teste.txt') as entrada:
+#       for arquivo in entrada:
+#          print(f'Diretório encontrado: {arquivo.name}')
+
+# with open('teste.txt','r',encoding=" utf-8") as arquivo:
+#     c = arquivo.read()
+#     print(c)
+
+# with open('test','w')as arquivo:
+#     os.mkdir('test')
+
+
+# os.rename('novo','teste+')
+
+
+# with os.scandir('c:/Users/aluno/Music') as arquivos:
+#     for x in arquivos:
+#         if x.is_file:
+#             print(x.name)
+
+# import shutil
+# shutil.rmtree('C:/Users/aluno/teste2.txt')
+
+
+# with os.scandir('') as entrada:
+#     for arquivo in entrada:
+#         if arquivo.is_file():
+#             print(f'Arquivo encontrado: {arquivo.name}')
+
+# import shutil
+# shutil.copytree('','nome da copia')
