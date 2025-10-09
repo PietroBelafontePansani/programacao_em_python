@@ -1,0 +1,49 @@
+import random
+
+
+# modulo.py
+
+
+# def aleatorio():
+#     numero = random.randint(5,11)
+#     return numero
+
+
+# def aleatorio_3():
+#     numero1 = random.randint(1,11)
+#     numero2 = random.randint(1,11)
+#     numero3 = random.randint(1,11)
+#     return numero1, numero2, numero3
+
+
+# def contagem():
+#     for n in range(10,1,-1):
+#         print(n)
+#     return 'fogo'
+
+
+
+# def numero():
+#     n = random.randint(10,30)
+#     return n
+
+# def usuario():
+#     us = int(input('digiti um numero: '))
+#     lista = []
+#     for n in range(2,us,):
+#         if n % 2 == 0:
+#            print(n)
+#            lista.append (n)
+#         soma = sum(lista)
+#     return soma
+
+# def tabuada():
+#     a = int(input('digiti um numero: '))
+#     for n in range(0,11):
+#         c = n * a
+#         print(a,'x',n,'=',c)
+            
+# def contagem():
+#     for n in range(99,2,-2):
+#         print(n)
+#     return 
