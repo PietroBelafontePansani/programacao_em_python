@@ -1,36 +1,65 @@
 import pygame
-import sys
 
 pygame.init()
 
-w = 800
-h = 600
+largura =  700
+altura = 450
 
-screen = pygame.display.set_mode((w,h))
-pygame.display.set_caption('ping e pong')
+tela =  pygame.display.set_mode((largura,altura))
+pygame.display.set_caption('Movimentando o quadrado')
 
-ball_x = 400 //2
-ball_y = 300 //2
 
-BV_X = 5
-BV_Y = 5
+branco = 46, 2, 25, 1
+azul = (0,0,255)
 
-largura_vareta = 20
-altura_vareta = 150
+x,y  = largura // 2, altura//2
+tamanho  =  20
+velocidade = 5
 
-white = 'white'
-green = 'green'
-black = 'black'
+x_circulo, y_circulo = 150,200
 
-def draw_shapes():
-    screen.fill('white')
 
-    pygame.draw.rect(screen, )
+# tela.fill(('red'))
+pygame.display.flip()
+run =  True
 
-while True:
+
+while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            run = False
 
-        pygame.display.flip()
+    teclas = pygame.key.get_pressed()      
+    if teclas[pygame.K_a]:
+          x  -= velocidade
+    if teclas[pygame.K_d]:
+          x  += velocidade
+    if teclas[pygame.K_w]:
+          y  -= velocidade
+    if teclas[pygame.K_s]:
+          y  = y + velocidade  
+
+
+    # teclas = pygame.key.get_pressed()      
+    if teclas[pygame.K_LEFT]:
+          x_circulo  -= velocidade
+    if teclas[pygame.K_RIGHT]:
+          x_circulo  += velocidade
+    if teclas[pygame.K_UP]:
+          y_circulo  -= velocidade
+    if teclas[pygame.K_DOWN]:
+          y_circulo  = y + velocidade        
+
+    tela.fill(branco)
+
+    pygame.draw.rect(tela, azul,(x,y, tamanho, tamanho))
+    pygame.draw.circle(tela,"red",(x_circulo, y_circulo),30)
+    pygame.draw.ellipse(tela, azul,(x_circulo, y_circulo, 150, 70))
+
+    pygame.display.flip()
+
+    pygame.time.Clock().tick(30)
+
+pygame.quit()             
+
+
