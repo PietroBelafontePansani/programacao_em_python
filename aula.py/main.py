@@ -18,3 +18,62 @@ print('_________________________________________________________________________
 print('importância garantir que os sistemas de TI estejam funcionando perfeitamente, desenvolver e implementar soluções personalizadas, proteger dados e dar suporte aos usuários,' \
 ' além de agir como parceira estratégica para alinhar a tecnologia aos objetivos de negócio')
 print('____________________________________________________________________________________________________________________________________________________________________________________')
+
+#-----------------------------------------------------------------------
+# pro codding -> codifica
+
+import streamlit as st
+import pandas as pd
+
+
+st.title('teste')
+dados = pd.read_csv('vendas.csv')
+
+df = pd.DataFrame(dados)
+st.bar_chart(df, x = 'nome', y = 'venda')
+
+#-----------------------------------------------------
+
+st.caption('Paragrafo')
+st.audio('audio.mp3')
+st.image('img.jpg', width=250)
+
+#-----------------------------------------------------
+
+# calculadora
+
+st.title('calculadora')
+
+st.caption('colocar 1 depois outro numero escolha a operação e ver o resultado')
+
+n1 = st.number_input('primero numero')
+n2 = st.number_input('segundo numero')
+
+escolha = st.selectbox('escolha a operação: ',['+','-','*','/'])
+
+if st.button('calcular'):
+    if escolha == '+':
+        soma = n1 + n2
+        resultado = soma
+    elif escolha == '-':
+        sub = n1 - n2
+        resultado = sub
+    elif escolha == '*':
+        mult = n1 * n2
+        resultado = mult
+    elif escolha == '/':
+        div = n1 / n2
+        resultado = div
+
+    st.success(resultado)
+
+#----------------------------------------------------------------
+     
+st.title('calculadora de IMC')
+
+peso = st.number_input('digite seu peso (kg): ')
+altura = st.number_input('digite sua altura (kg): ')
+
+if st.button('calcular imc'):
+    if altura > 0:
+        imc = peso / (altura ** 2)
