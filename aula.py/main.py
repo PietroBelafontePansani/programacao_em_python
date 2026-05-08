@@ -70,7 +70,7 @@ if st.button('calcular'):
 #----------------------------------------------------------------     
 import streamlit as st
 
-st.title('teste')
+st.title('calcular imc')
 
 n1 = st.number_input('peso:')
 n2 = st.number_input('altura:', value = 0.1)
