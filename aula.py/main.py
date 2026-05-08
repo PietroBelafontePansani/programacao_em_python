@@ -80,3 +80,16 @@ imc = n1/(n2**2)
 if st.button('calcular imc'):
     if imc:
         st.success(imc)
+#----------------------------------------------------------------
+
+st.caption('CADASTRO SIMPLES')
+
+nome = st.text_input('Nome: ')
+idade = st.number_input('Idade: ')
+email = st.text_input('email: ')
+altura = st.number_input('Altura: ')
+
+if st.button('Cadsatrar'):
+    st.success('Pessoa cadsatrada')
+#---------------------------------------------------------------
+
