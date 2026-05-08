@@ -67,13 +67,16 @@ if st.button('calcular'):
 
     st.success(resultado)
 
-#----------------------------------------------------------------
-     
-st.title('calculadora de IMC')
+#----------------------------------------------------------------     
+import streamlit as st
 
-peso = st.number_input('digite seu peso (kg): ')
-altura = st.number_input('digite sua altura (kg): ')
+st.title('teste')
+
+n1 = st.number_input('peso:')
+n2 = st.number_input('altura:', value = 0.1)
+
+imc = n1/(n2**2)
 
 if st.button('calcular imc'):
-    if altura > 0:
-        imc = peso / (altura ** 2)
+    if imc:
+        st.success(imc)
